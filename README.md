@@ -120,17 +120,23 @@ coach-skill/
 
 ```powershell
 # Windows
-robocopy "path\to\jiaolian-i-wanna-skill" "$env:USERPROFILE\.claude\skills\coach" /E /XO
+git clone https://github.com/Patrixkw/jiaolian-i-wanna-skill "$env:USERPROFILE\.claude\skills\coach"
 ```
 
 ```bash
 # macOS / Linux
-rsync -av --update path/to/jiaolian-i-wanna-skill/ ~/.claude/skills/coach/
+git clone https://github.com/Patrixkw/jiaolian-i-wanna-skill ~/.claude/skills/coach
 ```
 
 安装后重启 Claude Code，即可在 skill 列表中看到 `coach`。
 
 *Restart Claude Code after installation — `coach` will appear in the skill list.*
+
+**更新 · Update**
+
+```bash
+cd ~/.claude/skills/coach && git pull
+```
 
 **验证安装 · Verify**
 
